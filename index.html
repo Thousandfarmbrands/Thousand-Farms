@@ -1,108 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Thousand Farm Brands App</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f9f9f9;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-    .container {
-      background: #fff;
-      padding: 30px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-      width: 100%;
-      max-width: 400px;
-    }
-    h1 {
-      text-align: center;
-      color: #333;
-    }
-    input[type="text"], input[type="password"] {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    button {
-      width: 100%;
-      padding: 10px;
-      background: #28a745;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-    button:hover {
-      background: #218838;
-    }
-    .link {
-      margin-top: 10px;
-      text-align: center;
-    }
-    .dashboard {
-      display: none;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="container" id="login-container">
-    <h1>Login</h1>
-    <input type="text" id="username" placeholder="Employee Number" />
-    <input type="password" id="password" placeholder="Password" />
-    <button onclick="login()">Login</button>
-    <div class="link">
-      <a href="#" onclick="resetPassword()">Reset Password</a>
-    </div>
-  </div>
-
-  <div class="container dashboard" id="dashboard">
-    <h1>Dashboard</h1>
-    <p>Welcome to Thousand Farm Brands App! 🎉</p>
-    <ul>
-      <li>Animal Records</li>
-      <li>Task Logging</li>
-      <li>Feed Plans</li>
-      <li>Staff Activity</li>
-    </ul>
-    <button onclick="logout()">Logout</button>
-  </div>
-
-  <script>
-    function login() {
-      const username = document.getElementById('username').value;
-      const password = document.getElementById('password').value;
-
-      if (username === '001' && password === 'Access123') {
-        document.getElementById('login-container').style.display = 'none';
-        document.getElementById('dashboard').style.display = 'block';
-      } else {
-        alert('Invalid login. Try: 001 / Access123');
-      }
-    }
-
-    function resetPassword() {
-      alert("Reset link sent to your farm email address.");
-    }
-
-    function logout() {
-      document.getElementById('dashboard').style.display = 'none';
-      document.getElementById('login-container').style.display = 'block';
-      document.getElementById('username').value = '';
-      document.getElementById('password').value = '';
-    }
-  </script>
+  <h1>🐄 Thousand Farm Brands App</h1>
+  <p>Welcome to your farm management dashboard.</p>
+  <script src="app.js"></script>
 </body>
 </html>
